@@ -1,64 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthony Spearman | IT Portfolio</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anthony Spearman | IT Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<script src="js/main.js"></script>
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>Anthony Spearman</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
 <header class="hero">
-  <h1>Anthony Spearman</h1>
-  <h2>Information Technology Senior | Specialized Computing</h2>
-  <p>Designing secure, scalable systems that integrate backend architecture, cybersecurity principles, and business intelligence analytics.</p>
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">
+        <b>Senior IT Student</b> • Specialized Computing • Nashville, TN
+      </div>
 
-  <div class="buttons">
-    <a href="projects.html" class="btn">View Technical Projects</a>
-    <a href="capstone.html" class="btn secondary">View Capstone Ecosystem</a>
+      <h1>Building secure, scalable systems with real business impact.</h1>
+
+      <p class="subtitle">
+        Portfolio showcasing full-stack development, cybersecurity mindset, analytics, and project leadership —
+        designed for employers who want proof, not fluff.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="projects.html">View Projects</a>
+        <a class="btn" href="capstone.html">Explore Capstone Ecosystem</a>
+        <a class="btn ghost under" href="resume.html">Open Resume</a>
+      </div>
+
+      <div class="badges">
+        <span class="badge">Node.js / Express</span>
+        <span class="badge">APIs + Auth (JWT)</span>
+        <span class="badge">MongoDB + Data Modeling</span>
+        <span class="badge">Cybersecurity / DFIR</span>
+        <span class="badge">Business Analytics</span>
+        <span class="badge">Project Management</span>
+      </div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>Quick Proof</h3>
+      <div class="meta">
+        <div class="meta-row"><span>Portfolio Format</span><b>Live Website + GitHub</b></div>
+        <div class="meta-row"><span>Highlight</span><b>Capstone Ecosystem</b></div>
+        <div class="meta-row"><span>Focus</span><b>Security • Systems • Metrics</b></div>
+        <div class="meta-row"><span>Audience</span><b>Recruiters & Hiring Managers</b></div>
+      </div>
+    </aside>
   </div>
 </header>
 
-<section class="section reveal">
-  <h2>Core Skills</h2>
+<section class="section compact">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>What employers get from this portfolio</h2>
+        <p>Clear evidence of technical depth, professional growth, and the ability to ship structured solutions.</p>
+      </div>
+    </div>
 
-  <div class="skills">
-    <span class="chip">Node.js / Express</span>
-    <span class="chip">REST APIs</span>
-    <span class="chip">MongoDB / SQL Concepts</span>
-    <span class="chip">JWT Authentication</span>
-    <span class="chip">Cybersecurity (DFIR / Risk)</span>
-    <span class="chip">Business Analytics</span>
-    <span class="chip">Project Management (Agile)</span>
-    <span class="chip">Systems Thinking</span>
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Technical Depth</h3>
+        <p>APIs, authentication, database design, and architecture thinking — explained clearly.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Professional Growth</h3>
+        <p>Before/after evolution: early work → production-style structure and documentation.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Business Impact</h3>
+        <p>Projects framed with outcomes, metrics, and real-world usability — not just assignments.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section reveal">
-  <h2>Featured Capstone Ecosystem</h2>
-  <p>
-    A scalable interactive scavenger platform concept integrating secure authentication,
-    completion tracking, CRM-style engagement logging, and analytics dashboards.
-  </p>
-  <a href="capstone.html" class="btn">Explore Capstone</a>
+<section class="section">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Featured: Capstone Ecosystem</h2>
+        <p>
+          A scalable scavenger experience platform concept integrating secure login,
+          completion tracking, CRM-style engagement logging, and analytics.
+        </p>
+      </div>
+      <a class="btn" href="capstone.html">Open Capstone</a>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Systems View</h3>
+        <p>Users → API → Database → Engagement events → Analytics dashboard.</p>
+        <div class="badges">
+          <span class="badge">JWT</span>
+          <span class="badge">MongoDB</span>
+          <span class="badge">REST</span>
+          <span class="badge">Metrics</span>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h3>Why it’s a “wow” project</h3>
+        <p>It connects multiple course skills into one coherent product narrative — exactly what employers want.</p>
+        <a class="btn primary" href="projects.html">See the Projects</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman | IT Portfolio</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman • Built for ITI-4980 Sr Seminar ePortfolio</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
