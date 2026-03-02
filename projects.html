@@ -1,59 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects | Anthony Spearman</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Anthony Spearman</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<script src="js/main.js"></script>
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>Anthony Spearman</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="resume.html">Resume</a></li>
+    </ul>
+  </div>
 </nav>
 
-<section class="section reveal">
-  <h1>Major Projects</h1>
-  <p>Selected work demonstrating technical depth, professional growth, and real-world impact.</p>
+<section class="section">
+  <div class="container">
 
-  <div class="card reveal">
-    <h2>CRM Training Portal Backend Integration</h2>
-    <p><strong>Problem:</strong> Needed structured lesson completion tracking connected to engagement scoring.</p>
-    <p><strong>Solution:</strong> Built an endpoint that updates user progress and creates CRM engagement records.</p>
-    <p><strong>Tech Stack:</strong> Node.js, Express, MongoDB, JWT</p>
-    <p><strong>Evidence:</strong> API route code + data model + walkthrough.</p>
-    <a href="https://github.com/TreveccaStudentpy/anthony-portfolio" class="btn" target="_blank">GitHub Repo</a>
-  </div>
+    <h2>Major Projects & Technical Evidence</h2>
+    <p>This section highlights three major projects demonstrating backend architecture, cybersecurity awareness, analytics integration, and structured development.</p>
 
-  <div class="card reveal">
-    <h2>Cybersecurity / DFIR Case Study</h2>
-    <p><strong>Focus:</strong> Forensics methodology, evidence handling, and security-driven reporting.</p>
-    <p><strong>Tools:</strong> Autopsy / Volatility / Logs / Timeline analysis (adjust to what you used).</p>
-    <p><strong>Deliverable:</strong> Professional incident-style report with findings and recommendations.</p>
-    <a href="#" class="btn">Artifact / Repo (Add Link)</a>
-  </div>
+    <!-- PROJECT 1 -->
+    <div class="card">
+      <h3>CRM Training Portal Backend Integration</h3>
 
-  <div class="card reveal">
-    <h2>Scavenger Experience Platform (Capstone Ecosystem)</h2>
-    <p><strong>Concept:</strong> A gamified puzzle platform for families, events, and businesses.</p>
-    <p><strong>System:</strong> Auth + clue completion + analytics + admin dashboard concept.</p>
-    <p><strong>Business:</strong> Subscription tiers + growth roadmap + metrics dashboard mock.</p>
-    <a href="capstone.html" class="btn">Open Capstone Page</a>
+      <p><strong>Problem:</strong> No structured way to track lesson completion and engagement metrics.</p>
+
+      <p><strong>Solution:</strong> Designed and implemented a secure API endpoint that updates user progress and creates CRM engagement records.</p>
+
+      <p><strong>Technologies:</strong> Node.js, Express, MongoDB, JWT Authentication</p>
+
+      <p><strong>Impact:</strong> Created scalable backend logic ready for LMS deployment and analytics expansion.</p>
+
+      <a href="https://github.com/TreveccaStudentpy/anthony-portfolio" class="btn primary" target="_blank">View GitHub</a>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="card">
+      <h3>Cybersecurity / DFIR Case Study</h3>
+
+      <p><strong>Focus:</strong> Applied digital forensics methodology to analyze system artifacts and incident traces.</p>
+
+      <p><strong>Tools:</strong> Autopsy, Volatility, Log Analysis</p>
+
+      <p><strong>Outcome:</strong> Produced structured documentation and incident-style reporting.</p>
+
+      <p><strong>Skill Demonstrated:</strong> Analytical reasoning, security mindset, evidence-based conclusions.</p>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="card">
+      <h3>Scavenger Experience Platform (Capstone Ecosystem)</h3>
+
+      <p><strong>Concept:</strong> A scalable interactive SaaS-style event platform.</p>
+
+      <p><strong>System Design:</strong> Authentication → Completion Tracking → CRM Logging → Analytics Dashboard</p>
+
+      <p><strong>Business Model:</strong> Subscription tiers + custom event packages.</p>
+
+      <p><strong>Value:</strong> Integrates full-stack skills, business analytics, and project management into one ecosystem.</p>
+
+      <a href="capstone.html" class="btn">Explore Capstone</a>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
