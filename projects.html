@@ -43,6 +43,7 @@
 
       <div class="cta">
         <a class="btn primary" href="#featured">View Featured</a>
+        <a class="btn" href="#demo">Watch Demo</a>
         <a class="btn" href="capstone.html">Explore Capstone</a>
         <a class="btn ghost under" href="artifacts.html">Open Artifacts</a>
       </div>
@@ -69,61 +70,77 @@
   </div>
 </header>
 
-<section id="featured" class="section compact">
+<!-- ✅ REPLACE the entire <section id="demo"> ... </section> block with THIS (no video needed) -->
+<section class="section compact" id="demo">
   <div class="container">
     <div class="head reveal">
       <div>
-        <h2>Featured Case Studies</h2>
-        <p>Three projects presented with clarity: problem → approach → build → results.</p>
+        <h2>Demo Proof Pack</h2>
+        <p>Clickable evidence instead of a video: architecture, API test proof, and DFIR reporting artifacts.</p>
       </div>
     </div>
 
-    <div class="grid cols-3">
-      <article class="card reveal">
-        <h3>CRM Training Portal (ESP/GSI)</h3>
-        <p>
-          Full-stack training platform concept: user accounts, lessons, progress tracking,
-          and CRM-style engagement logging.
-        </p>
-        <div class="badges">
-          <span class="badge">Node</span>
-          <span class="badge">MongoDB</span>
-          <span class="badge">Auth</span>
-        </div>
-        <p><a class="under" href="case-crm-portal.html">Open Case Study →</a></p>
-      </article>
+    <div class="grid cols-2">
+      <!-- Left: Proof links -->
+      <div class="card reveal">
+        <h3>Evidence (Open in new tab)</h3>
+        <p>Fast proof that the system is designed, testable, and documented.</p>
 
-      <article class="card reveal">
-        <h3>Lesson Completion API</h3>
-        <p>
-          Endpoint that records lesson completion and creates a CRM engagement entry —
-          designed for auditability and analytics.
+        <div class="cta" style="margin-top:.75rem; flex-wrap: wrap;">
+          <a class="btn primary" href="assets/docs/System_Diagram_Architecture_Overview.pdf" target="_blank" rel="noopener">
+            Open System Diagram (PDF)
+          </a>
+          <a class="btn" href="assets/docs/Technical_Demonstration_Report_Anthony_Spearman.pdf" target="_blank" rel="noopener">
+            Open Demo Report (PDF)
+          </a>
+          <a class="btn" href="assets/docs/Technical_Demonstration_Presentation_Anthony_Spearman.pdf" target="_blank" rel="noopener">
+            Open Slides (PDF)
+          </a>
+          <a class="btn" href="assets/docs/Project_Plan_Timeline.pdf" target="_blank" rel="noopener">
+            Open Project Plan (PDF)
+          </a>
+          <a class="btn" href="assets/docs/Security_DFIR_Notes.pdf" target="_blank" rel="noopener">
+            Open DFIR Notes (PDF)
+          </a>
+        </div>
+
+        <p style="margin-top:.75rem;">
+          <a class="under" href="artifacts.html">Browse all artifacts →</a>
         </p>
+      </div>
+
+      <!-- Right: “Live” proof without video -->
+      <div class="card reveal">
+        <h3>API Proof (Copy/Paste)</h3>
+        <p>Example request to mark a lesson complete and create a CRM engagement entry.</p>
+
         <div class="badges">
           <span class="badge">Express</span>
           <span class="badge">REST</span>
-          <span class="badge">Testing</span>
+          <span class="badge">Auditability</span>
+          <span class="badge">Metrics</span>
         </div>
-        <p><a class="under" href="case-lesson-api.html">Open Case Study →</a></p>
-      </article>
 
-      <article class="card reveal">
-        <h3>Digital Forensics Investigation</h3>
-        <p>
-          Structured incident-style analysis with evidence handling, tool usage,
-          and professional reporting.
-        </p>
-        <div class="badges">
-          <span class="badge">DFIR</span>
-          <span class="badge">Autopsy</span>
-          <span class="badge">Reporting</span>
+        <pre style="margin-top:.75rem; overflow:auto; padding:1rem; border-radius:12px; background: rgba(255,255,255,.04);">
+curl -X POST "http://localhost:3000/api/lessons/LESSON_ID/complete" \
+  -H "Authorization: Bearer YOUR_JWT_TOKEN" \
+  -H "Content-Type: application/json"
+        </pre>
+
+        <pre style="margin-top:.75rem; overflow:auto; padding:1rem; border-radius:12px; background: rgba(255,255,255,.04);">
+{
+  "message": "Lesson marked complete"
+}
+        </pre>
+
+        <div class="cta" style="margin-top:.75rem;">
+          <a class="btn primary" href="capstone.html">Explore Capstone</a>
+          <a class="btn" href="artifacts.html">Open Artifacts</a>
         </div>
-        <p><a class="under" href="case-dfir.html">Open Case Study →</a></p>
-      </article>
+      </div>
     </div>
   </div>
 </section>
-
 <section class="section">
   <div class="container">
     <div class="head reveal">
@@ -163,7 +180,8 @@
       </p>
       <div class="cta" style="margin-top: .75rem;">
         <a class="btn primary" href="artifacts.html">Open Artifacts</a>
-        <a class="btn" href="capstone.html">Open Capstone</a>
+      <!-- ✅ OPTIONAL: Add this button into your hero CTA on projects.html -->
+<a class="btn" href="#demo">Open Proof Pack</a>
       </div>
     </div>
   </div>
