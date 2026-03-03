@@ -1,44 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About | Anthony Spearman</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Anthony Spearman</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<script src="js/main.js"></script>
+
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>Anthony Spearman</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="artifacts.html">Artifacts</a></li>
+    </ul>
+  </div>
 </nav>
 
-<section class="section">
-  <h1>About Me</h1>
-  <p>I am a senior Information Technology student specializing in systems architecture, security, and data-driven development. My work integrates technical precision with business strategy to create scalable digital solutions.</p>
+<header class="hero small-hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">
+        Senior IT Student • Specialized Computing • Nashville, TN
+      </div>
 
-  <h2>Core Competencies</h2>
-  <ul>
-    <li>Full-Stack Development</li>
-    <li>API Design & Integration</li>
-    <li>Cybersecurity Principles</li>
-    <li>Database Architecture</li>
-    <li>Business Analytics</li>
-    <li>Agile Project Management</li>
-  </ul>
+      <h1>Turning structured thinking into secure, scalable systems.</h1>
+
+      <p class="subtitle">
+        I focus on combining technical depth with business clarity — building systems 
+        that are not only functional, but measurable, secure, and professionally structured.
+      </p>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>At a Glance</h3>
+      <div class="meta">
+        <div class="meta-row"><span>University</span><b>Trevecca Nazarene University</b></div>
+        <div class="meta-row"><span>Major</span><b>Information Technology</b></div>
+        <div class="meta-row"><span>Specialization</span><b>Specialized Computing</b></div>
+        <div class="meta-row"><span>Graduation</span><b>May 2026</b></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section class="section compact">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Professional Philosophy</h2>
+        <p>Systems thinking. Security mindset. Business awareness.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Systems First</h3>
+        <p>
+          I approach projects by mapping the full ecosystem: users, APIs, data models,
+          authentication layers, logging, and analytics — not just front-end features.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Security by Design</h3>
+        <p>
+          From JWT authentication to controlled API routes and database validation,
+          I prioritize secure architecture over quick shortcuts.
+        </p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Business Impact</h3>
+        <p>
+          Technology must connect to measurable outcomes — user engagement,
+          performance improvements, operational efficiency, or cost savings.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Core Skill Areas</h2>
+        <p>Technical competencies developed through coursework, labs, and capstone integration.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Development & Architecture</h3>
+        <div class="badges">
+          <span class="badge">Node.js</span>
+          <span class="badge">Express</span>
+          <span class="badge">REST APIs</span>
+          <span class="badge">JWT Authentication</span>
+          <span class="badge">MongoDB</span>
+          <span class="badge">Data Modeling</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Cybersecurity & Systems</h3>
+        <div class="badges">
+          <span class="badge">DFIR Labs</span>
+          <span class="badge">Volatility</span>
+          <span class="badge">Autopsy</span>
+          <span class="badge">Operating Systems</span>
+          <span class="badge">Risk Assessment</span>
+          <span class="badge">Threat Awareness</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section compact">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Growth Trajectory</h2>
+        <p>Demonstrating evolution from student projects to production-style systems.</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <p>
+        My early coursework focused on foundational technical skills. 
+        Over time, my work evolved toward integrated ecosystems —
+        combining backend logic, structured APIs, authentication flows,
+        analytics tracking, and professional documentation.
+      </p>
+
+      <p style="margin-top:1rem;">
+        The Capstone Ecosystem project represents this progression —
+        not just a feature demo, but a cohesive system narrative 
+        built with employer expectations in mind.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Career Objective</h2>
+        <p>Seeking roles that value structured problem-solving and system-level thinking.</p>
+      </div>
+      <a class="btn primary" href="resume.html">View Resume</a>
+    </div>
+
+    <div class="card reveal">
+      <p>
+        I am pursuing opportunities in backend development, systems engineering,
+        cybersecurity analysis, or technical project environments where 
+        architecture, security, and measurable outcomes intersect.
+      </p>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman • Built for ITI-4980 Sr Seminar ePortfolio</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

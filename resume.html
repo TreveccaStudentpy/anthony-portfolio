@@ -1,35 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume | Anthony Spearman</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume | Anthony Spearman</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<script src="js/main.js"></script>
+
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>Anthony Spearman</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="artifacts.html">Artifacts</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a class="active" href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
-<section class="section">
-  <h1>Resume</h1>
-  <p>Download my professional resume below:</p>
-<a href="assets/docs/Anthony_Spearman_Resume.docx" class="btn" target="_blank">Open Resume </a>
+<header class="hero small-hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">
+        Resume • Experience • Skills • Projects
+      </div>
+
+      <h1>Resume</h1>
+
+      <p class="subtitle">
+        Download the latest version of my resume. Built to be clear, ATS-friendly,
+        and focused on proof: systems, security mindset, analytics, and delivery.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="assets/docs/Anthony_Spearman_Resume.docx" target="_blank" rel="noopener">
+          Open Resume (DOCX)
+        </a>
+        <!-- Optional PDF (recommended). Add the file if you have it -->
+        <a class="btn" href="assets/docs/Anthony_Spearman_Resume.pdf" target="_blank" rel="noopener">
+          Open Resume (PDF)
+        </a>
+      </div>
+
+      <div class="badges">
+        <span class="badge">Backend + APIs</span>
+        <span class="badge">JWT Auth</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">Cybersecurity / DFIR</span>
+        <span class="badge">Analytics</span>
+        <span class="badge">Project Management</span>
+      </div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>Quick Links</h3>
+      <div class="meta">
+        <div class="meta-row"><span>Projects</span><b><a href="projects.html">View</a></b></div>
+        <div class="meta-row"><span>Capstone</span><b><a href="capstone.html">Open</a></b></div>
+        <div class="meta-row"><span>Artifacts</span><b><a href="artifacts.html">Browse</a></b></div>
+        <div class="meta-row"><span>Contact</span><b><a href="contact.html">Reach Out</a></b></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<section class="section compact">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>What this resume emphasizes</h2>
+        <p>Clear signal for technical roles and system-level problem solving.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Systems Thinking</h3>
+        <p>Architecture, data flow, authentication patterns, and structured builds.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Security Mindset</h3>
+        <p>Route protection, access control concepts, and DFIR awareness.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Business Impact</h3>
+        <p>Projects framed with outcomes, measurable progress, and clarity.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman • IT Portfolio</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

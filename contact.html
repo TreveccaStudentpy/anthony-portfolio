@@ -1,36 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Anthony Spearman</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Anthony Spearman</title>
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<script src="js/main.js"></script>
+
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      <span>Anthony Spearman</span>
+    </div>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="artifacts.html">Artifacts</a></li>
+      <li><a href="capstone.html">Capstone</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
+<header class="hero small-hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">
+        Contact • Opportunities • Collaboration • Questions
+      </div>
+
+      <h1>Let’s connect.</h1>
+
+      <p class="subtitle">
+        If you’re hiring, exploring a project, or want to talk systems, security, or product thinking,
+        send a message and I’ll respond as soon as possible.
+      </p>
+
+      <div class="badges">
+        <span class="badge">Backend</span>
+        <span class="badge">Cybersecurity</span>
+        <span class="badge">Systems</span>
+        <span class="badge">Analytics</span>
+        <span class="badge">Project Leadership</span>
+      </div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>Quick Links</h3>
+      <div class="meta">
+        <!-- Replace # with your real URLs when ready -->
+        <div class="meta-row"><span>Email</span><b><a class="under" href="mailto:iAnthonySpearman@gmail.com">iAnthonySpearman@gmail.com</a></b></div>
+        <div class="meta-row"><span>LinkedIn</span><b><a class="under" href="#" target="_blank" rel="noopener">View Profile</a></b></div>
+        <div class="meta-row"><span>GitHub</span><b><a class="under" href="#" target="_blank" rel="noopener">View Repos</a></b></div>
+        <div class="meta-row"><span>Location</span><b>Nashville, TN</b></div>
+      </div>
+    </aside>
+  </div>
+</header>
+
 <section class="section">
-  <h1>Contact</h1>
-  <p>Email: iAnthonySpearman@gmail.com</p>
-  <p>LinkedIn: linkedin.com/in/yourprofile</p>
-  <p>GitHub: github.com/TreveccaStudentpy</p>
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Send a Message</h2>
+        <p>Clean, direct, and easy — no noise.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Contact Form</h3>
+
+        <!--
+          NOTE:
+          - This form is front-end only. It uses "mailto:" so it works on static hosting.
+          - If you later add a backend, swap action="" and method="POST" to your endpoint.
+        -->
+        <form class="form" action="mailto:yourname@email.com" method="post" enctype="text/plain">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@email.com" required />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Hiring / Project / Question" required />
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+          </div>
+
+          <div class="cta">
+            <button class="btn primary" type="submit">Send Message</button>
+            <a class="btn ghost under" href="resume.html">Open Resume</a>
+          </div>
+        </form>
+      </div>
+
+      <div class="card reveal">
+        <h3>What I’m Open To</h3>
+        <p>
+          I’m interested in opportunities where secure system design, backend development,
+          analytics-minded thinking, and structured delivery matter.
+        </p>
+
+        <ul class="list" style="margin-top:1rem;">
+          <li><b>Roles:</b> Backend / Systems / Security-focused IT</li>
+          <li><b>Work:</b> Full-time • Internship • Contract projects</li>
+          <li><b>Topics:</b> API design • Auth • Data models • DFIR • Dashboards</li>
+        </ul>
+
+        <div class="cta" style="margin-top:1rem;">
+          <a class="btn primary" href="projects.html">View Projects</a>
+          <a class="btn" href="capstone.html">View Capstone</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman • IT Portfolio</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>

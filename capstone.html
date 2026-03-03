@@ -1,81 +1,499 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capstone | Anthony Spearman</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capstone | Anthony Spearman</title>
+  <meta name="description" content="Capstone Ecosystem: secure login, lesson completion tracking, CRM-style engagement logging, and analytics-ready system design." />
+  <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<script src="js/main.js"></script>
+
 <body>
 
 <nav>
-  <div class="logo">Anthony Spearman</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="capstone.html">Capstone</a></li>
-    <li><a href="resume.html">Resume</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <div class="container navwrap">
+    <a class="logo" href="index.html" aria-label="Go to Home">
+      <span class="logo-dot" aria-hidden="true"></span>
+      <span>Anthony Spearman</span>
+    </a>
+
+    <ul class="navlinks" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="artifacts.html">Artifacts</a></li>
+      <li><a class="active" href="capstone.html" aria-current="page">Capstone</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
 </nav>
 
+<header class="hero hero-capstone">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="kicker">
+        Capstone Ecosystem • Secure Auth • Completion Tracking • Engagement Events • Analytics-Ready
+      </div>
+
+      <h1>Built like a real product: actions become data, and data becomes decisions.</h1>
+
+      <p class="subtitle">
+        This capstone demonstrates an end-to-end platform pattern:
+        authenticate users, track progress, log engagement events, and prepare clean data for dashboards.
+        Not just features — infrastructure that scales.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#story">Start Here</a>
+        <a class="btn" href="#architecture">Architecture</a>
+        <a class="btn ghost under" href="#proof">Proof</a>
+      </div>
+
+      <div class="badges">
+        <span class="badge">Node.js / Express</span>
+        <span class="badge">JWT Auth</span>
+        <span class="badge">MongoDB</span>
+        <span class="badge">REST APIs</span>
+        <span class="badge">Event Logging</span>
+        <span class="badge">Metrics</span>
+      </div>
+    </div>
+
+    <aside class="hero-card reveal">
+      <h3>Capstone Snapshot</h3>
+      <div class="meta">
+        <div class="meta-row"><span>System Type</span><b>CRM + LMS-style tracking</b></div>
+        <div class="meta-row"><span>Primary Outcome</span><b>Engagement → measurable insights</b></div>
+        <div class="meta-row"><span>Evidence</span><b>Routes • Models • Logs • UI</b></div>
+        <div class="meta-row"><span>Design Goal</span><b>Secure • Scalable • Audit-friendly</b></div>
+      </div>
+
+      <div class="mini-kpis">
+        <div class="kpi">
+          <div class="kpi-top">Events</div>
+          <div class="kpi-num">+1</div>
+          <div class="kpi-sub">per key action</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-top">Data</div>
+          <div class="kpi-num">Clean</div>
+          <div class="kpi-sub">analytics-ready</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-top">Pattern</div>
+          <div class="kpi-num">Reusable</div>
+          <div class="kpi-sub">across modules</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<!-- STORY / BELIEF BUILDER -->
+<section class="section" id="story">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>What problem does this solve?</h2>
+        <p>This is the “why” behind the build — the part that makes it believable.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Business gap</h3>
+        <p>
+          Many platforms can host content, but they fail to capture <b>meaningful engagement</b> in a structured way.
+          Without event logs, you can’t confidently answer: <i>Who is progressing? What content works? Where do users drop?</i>
+        </p>
+        <ul class="list">
+          <li><b>Before:</b> content exists, but outcomes are unclear</li>
+          <li><b>After:</b> actions generate data, and data drives decisions</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h3>Target users</h3>
+        <p>
+          Designed for training + relationship-driven programs where accountability matters:
+          onboarding, micro-courses, internal training, or client education.
+        </p>
+        <div class="badges">
+          <span class="badge">Learners</span>
+          <span class="badge">Admins</span>
+          <span class="badge">Managers</span>
+          <span class="badge">Client success</span>
+        </div>
+
+        <div class="callout" style="margin-top:1rem;">
+          <b>Core idea:</b> every key action emits an event record that can be reviewed, scored, and analyzed.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM MODEL -->
+<section class="section compact" id="system">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>The System, End-to-End</h2>
+        <p>A simple mental model: people → actions → events → data → decisions.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Users</h3>
+        <p>Authentication and identity boundaries: secure sessions, protected routes, and role-ready structure.</p>
+        <div class="badges">
+          <span class="badge">JWT</span>
+          <span class="badge">Auth</span>
+          <span class="badge">Roles</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Experiences</h3>
+        <p>Users progress through structured lessons/tasks — built for completion tracking and accountability.</p>
+        <div class="badges">
+          <span class="badge">Lessons</span>
+          <span class="badge">Progress</span>
+          <span class="badge">Completion</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Engagement → Analytics</h3>
+        <p>Every meaningful action emits an event record that supports reporting, scoring, and optimization.</p>
+        <div class="badges">
+          <span class="badge">Events</span>
+          <span class="badge">CRM-style log</span>
+          <span class="badge">Metrics</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:1.25rem;">
+      <h3>Flow</h3>
+      <p style="margin-bottom:.75rem;">
+        <b>UI</b> → <b>API Routes</b> → <b>Auth Middleware</b> → <b>DB Models</b> → <b>Event Log</b> → <b>Analytics</b>
+      </p>
+      <div class="badges">
+        <span class="badge">Clean boundaries</span>
+        <span class="badge">Audit-friendly</span>
+        <span class="badge">Scales with features</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE (VISUAL PROOF) -->
+<section class="section" id="architecture">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Architecture</h2>
+        <p>A simple diagram that makes the system “real” instantly.</p>
+      </div>
+    </div>
+
+    <div class="card reveal">
+      <div class="arch-wrap" role="img" aria-label="Architecture diagram: UI talks to API, which uses auth middleware and database models, writing to progress and CRM event collections, which feed analytics.">
+        <svg class="arch-svg" viewBox="0 0 980 320" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="10" stdDeviation="12" flood-opacity="0.18"/>
+            </filter>
+          </defs>
+
+          <!-- Boxes -->
+          <g filter="url(#softShadow)">
+            <rect x="30" y="70" rx="18" ry="18" width="200" height="180" class="arch-box"/>
+            <rect x="270" y="70" rx="18" ry="18" width="220" height="180" class="arch-box"/>
+            <rect x="530" y="35" rx="18" ry="18" width="420" height="250" class="arch-box"/>
+          </g>
+
+          <!-- Text -->
+          <text x="60" y="110" class="arch-title">Front-End</text>
+          <text x="60" y="140" class="arch-sub">UI / Pages</text>
+          <text x="60" y="168" class="arch-sub">Buttons → Requests</text>
+          <text x="60" y="196" class="arch-sub">User sessions</text>
+
+          <text x="300" y="110" class="arch-title">API Layer</text>
+          <text x="300" y="140" class="arch-sub">Express Routes</text>
+          <text x="300" y="168" class="arch-sub">Controllers</text>
+          <text x="300" y="196" class="arch-sub">Validation</text>
+
+          <text x="560" y="75" class="arch-title">Data Layer</text>
+          <text x="560" y="105" class="arch-sub">MongoDB Collections</text>
+
+          <!-- Data inner boxes -->
+          <g filter="url(#softShadow)">
+            <rect x="560" y="130" rx="14" ry="14" width="190" height="120" class="arch-mini"/>
+            <rect x="760" y="130" rx="14" ry="14" width="170" height="120" class="arch-mini"/>
+          </g>
+
+          <text x="585" y="165" class="arch-mini-title">Progress</text>
+          <text x="585" y="193" class="arch-mini-sub">completed: true/false</text>
+          <text x="585" y="217" class="arch-mini-sub">completedAt: Date</text>
+
+          <text x="785" y="165" class="arch-mini-title">CRM Events</text>
+          <text x="785" y="193" class="arch-mini-sub">score, note, time</text>
+          <text x="785" y="217" class="arch-mini-sub">audit trail</text>
+
+          <!-- Arrows -->
+          <path d="M235 160 L265 160" class="arch-arrow"/>
+          <path d="M495 160 L525 160" class="arch-arrow"/>
+
+          <!-- Analytics label -->
+          <text x="560" y="285" class="arch-foot">Analytics-ready outputs (KPIs, funnels, cohorts)</text>
+        </svg>
+      </div>
+
+      <div class="grid cols-3" style="margin-top:1rem;">
+        <div class="mini reveal">
+          <b>Security</b>
+          <div class="muted">verifyToken middleware blocks unauthorized access.</div>
+        </div>
+        <div class="mini reveal">
+          <b>Traceability</b>
+          <div class="muted">Each completion creates an event log entry.</div>
+        </div>
+        <div class="mini reveal">
+          <b>Scalability</b>
+          <div class="muted">Same pattern can expand to quizzes, payments, messages.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Key Features</h2>
+        <p>Designed to feel like product infrastructure, not a one-off build.</p>
+      </div>
+      <a class="btn" href="projects.html">See Related Builds</a>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Secure Authentication</h3>
+        <p>JWT-based authentication patterns that protect routes and enforce identity-driven access.</p>
+        <div class="badges">
+          <span class="badge">JWT</span>
+          <span class="badge">Middleware</span>
+          <span class="badge">Protected routes</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Completion Tracking</h3>
+        <p>Lessons/tasks record completion state and timestamps for measurable progress and accountability.</p>
+        <div class="badges">
+          <span class="badge">Progress model</span>
+          <span class="badge">Timestamps</span>
+          <span class="badge">Upsert</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Engagement Logging</h3>
+        <p>CRM-style event entries capture meaningful activity to support reporting and optimization.</p>
+        <div class="badges">
+          <span class="badge">Event stream</span>
+          <span class="badge">Engagement score</span>
+          <span class="badge">Notes</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Analytics-Ready Design</h3>
+        <p>The model is built so dashboards can be added without rewriting the core platform.</p>
+        <div class="badges">
+          <span class="badge">KPIs</span>
+          <span class="badge">Dashboards</span>
+          <span class="badge">Insights</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS (BELIEF BUILDER) -->
+<section class="section compact" id="metrics">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>What gets measured?</h2>
+        <p>These are the exact numbers an admin dashboard can show once events exist.</p>
+      </div>
+    </div>
+
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Completion Rate</h3>
+        <p class="muted">Completed lessons / assigned lessons</p>
+        <div class="kpi-big">KPI</div>
+        <div class="badges">
+          <span class="badge">Progress</span>
+          <span class="badge">Accountability</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Engagement Score</h3>
+        <p class="muted">Weighted activity points (events)</p>
+        <div class="kpi-big">KPI</div>
+        <div class="badges">
+          <span class="badge">Events</span>
+          <span class="badge">Scoring</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Drop-off Points</h3>
+        <p class="muted">Where users stop progressing (funnels)</p>
+        <div class="kpi-big">KPI</div>
+        <div class="badges">
+          <span class="badge">Funnels</span>
+          <span class="badge">Optimization</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout reveal" style="margin-top:1rem;">
+      <b>Why this matters:</b> in real systems, the difference between “a course” and “a product” is the ability to measure and improve outcomes.
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="section compact" id="proof">
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Implementation Proof</h2>
+        <p>Concrete technical evidence. Short. Clear. Verifiable.</p>
+      </div>
+      <a class="btn primary" href="artifacts.html">Open Artifacts</a>
+    </div>
+
+    <div class="grid cols-2">
+      <div class="card reveal">
+        <h3>Example Endpoint</h3>
+        <p style="margin-bottom:.75rem;">
+          Lesson completion route: updates progress and creates an engagement entry.
+        </p>
+
+        <pre class="codeblock"><code>// POST /api/lessons/:lessonId/complete
+router.post('/api/lessons/:lessonId/complete', verifyToken, async (req, res) =&gt; {
+  const { lessonId } = req.params;
+  const userId = req.user.id;
+
+  await Progress.updateOne(
+    { user: userId, lesson: lessonId },
+    { $set: { completed: true, completedAt: new Date() } },
+    { upsert: true }
+  );
+
+  await CRMEntry.create({
+    user: userId,
+    lesson: lessonId,
+    engagementScore: 10,
+    note: 'Completed lesson',
+    timestamp: new Date()
+  });
+
+  res.status(200).json({ message: 'Lesson marked complete' });
+});</code></pre>
+
+        <div class="badges">
+          <span class="badge">Auth protected</span>
+          <span class="badge">DB update</span>
+          <span class="badge">Event log</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>What This Proves</h3>
+        <ul class="list">
+          <li><b>Security:</b> protected routes via middleware</li>
+          <li><b>Data design:</b> progress tracking with timestamps</li>
+          <li><b>Product thinking:</b> engagement events for analytics</li>
+          <li><b>Scalability:</b> reusable patterns for future modules</li>
+        </ul>
+
+        <div class="cta" style="margin-top:1rem;">
+          <!-- Replace with real links -->
+          <a class="btn primary" href="https://github.com/TreveccaStudentpy/anthony-portfolio" target="_blank" rel="noreferrer">View GitHub Repo</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT -->
 <section class="section">
-  <h1>Scavenger Experience Platform</h1>
-  
-<section class="section reveal">
-  <h2>System Architecture Overview</h2>
+  <div class="container">
+    <div class="head reveal">
+      <div>
+        <h2>Next Expansion</h2>
+        <p>Planned additions that strengthen the platform without changing the foundation.</p>
+      </div>
+    </div>
 
-  <div class="card">
-    <p><strong>Flow:</strong></p>
-    <ul>
-      <li>User logs in (JWT Authentication)</li>
-      <li>User completes clue/lesson</li>
-      <li>Backend API updates progress in database</li>
-      <li>CRM engagement record created</li>
-      <li>Analytics dashboard updates metrics</li>
-    </ul>
+    <div class="grid cols-3">
+      <div class="card reveal">
+        <h3>Admin Console</h3>
+        <p>Manage users, content, scoring rules, and activity review.</p>
+        <div class="badges">
+          <span class="badge">RBAC</span>
+          <span class="badge">Audit</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Analytics Dashboard</h3>
+        <p>Engagement trends, completion rates, funnels, cohort insights.</p>
+        <div class="badges">
+          <span class="badge">KPIs</span>
+          <span class="badge">Funnels</span>
+        </div>
+      </div>
+
+      <div class="card reveal">
+        <h3>Automation & Messaging</h3>
+        <p>Triggered follow-ups and reminders based on engagement events.</p>
+        <div class="badges">
+          <span class="badge">Workflows</span>
+          <span class="badge">Events</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card reveal" style="margin-top:1.25rem;">
+      
+      <p class="muted" style="margin:0;">
+        “A secure, analytics-ready training platform pattern where every completion creates a CRM-style engagement event.”
+      </p>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Technology Stack</h3>
-    <ul>
-      <li>Frontend: HTML / CSS / JavaScript</li>
-      <li>Backend: Node.js / Express</li>
-      <li>Database: MongoDB</li>
-      <li>Security: JWT Token Verification</li>
-      <li>Analytics: Engagement Scoring Logic</li>
-    </ul>
-  </div>
-</section>
-
-<section class="section reveal">
-  <h2>Business Impact & Scalability</h2>
-
-  <div class="card">
-    <p><strong>Target Market:</strong> Families, Event Planners, Corporate Team Building</p>
-    <p><strong>Revenue Model:</strong> Subscription tiers + custom event packages</p>
-    <p><strong>Scalability:</strong> Cloud-ready backend structure supporting thousands of users</p>
-    <p><strong>Future Expansion:</strong> Mobile app version + enterprise analytics dashboard</p>
-  </div>
-</section>
-
-  <p>A SaaS-based interactive puzzle and event system integrating backend APIs, secure login authentication, analytics dashboards, and business intelligence reporting.</p>
-
-  <h2>System Components</h2>
-  <ul>
-    <li>User Authentication (JWT)</li>
-    <li>Lesson/Clue Completion Tracking</li>
-    <li>CRM Engagement Logging</li>
-    <li>Analytics Dashboard</li>
-    <li>Administrative Control Panel</li>
-  </ul>
 </section>
 
 <footer>
-  <p>© 2026 Anthony Spearman</p>
+  <div class="container">
+    <small>© 2026 Anthony Spearman • IT Portfolio</small>
+  </div>
 </footer>
 
+<script src="js/main.js"></script>
 </body>
 </html>
