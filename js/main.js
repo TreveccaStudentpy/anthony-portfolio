@@ -33,3 +33,19 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     if (!inside) navLinks.classList.remove("open");
   });
 })();
+
+// Scroll progress bar
+const bar = document.querySelector(".scrollbar");
+if (bar) {
+  const updateBar = () => {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const height = doc.scrollHeight - doc.clientHeight;
+    const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+    bar.style.width = progress + "%";
+  };
+
+  window.addEventListener("scroll", updateBar, { passive: true });
+  window.addEventListener("resize", updateBar);
+  updateBar();
+}
