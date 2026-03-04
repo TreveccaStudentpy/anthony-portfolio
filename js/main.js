@@ -30,3 +30,18 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
     });
   });
 })();
+
+// Mobile nav toggle
+const navBtn = document.getElementById("navbtn");
+const navLinks = document.querySelector(".navlinks");
+
+if (navBtn && navLinks) {
+  navBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+  });
+
+  // Close menu after clicking a link (mobile UX)
+  navLinks.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => navLinks.classList.remove("open"));
+  });
+}
