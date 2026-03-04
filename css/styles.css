@@ -604,3 +604,57 @@ body { background-color: var(--bg); }
     box-shadow: 0 0 0 0 rgba(79,156,255,0.6);
   }
 }
+
+/* ===== Apple-ish premium polish (spotlight + grain + sheen) ===== */
+
+/* Soft moving spotlight over the whole page */
+body::before{
+  content:"";
+  position: fixed;
+  inset:-30%;
+  pointer-events:none;
+  z-index:-2;
+  background:
+    radial-gradient(900px 520px at 30% 10%, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(780px 480px at 70% 0%, rgba(255,255,255,0.06), transparent 62%),
+    radial-gradient(900px 520px at 50% 95%, rgba(255,255,255,0.05), transparent 65%);
+  filter: blur(18px);
+  animation: spotlightMove 14s ease-in-out infinite alternate;
+}
+
+@keyframes spotlightMove{
+  from{ transform: translate3d(-10px,-10px,0) scale(1); }
+  to  { transform: translate3d(14px,12px,0) scale(1.02); }
+}
+
+/* Subtle grain to make gradients look “expensive” */
+body::after{
+  content:"";
+  position: fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.14'/%3E%3C/svg%3E");
+  opacity: .08;
+  mix-blend-mode: overlay;
+}
+
+/* Card sheen on hover */
+.card{
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.10), transparent 60%);
+  transform: translateX(-60%) rotate(8deg);
+  transition: transform .55s ease;
+  pointer-events:none;
+}
+
+.card:hover::before{
+  transform: translateX(35%) rotate(8deg);
+}
