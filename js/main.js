@@ -10,26 +10,6 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-// Mobile nav toggle (matches your HTML: .nav-toggle + .nav-links)
-(() => {
-  const toggle = document.querySelector(".nav-toggle");
-  const links = document.querySelector(".nav-links");
-
-  if (!toggle || !links) return;
-
-  toggle.addEventListener("click", () => {
-    const isOpen = links.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  // Close menu when a link is clicked (mobile)
-  links.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      links.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-})();
 
 // Mobile nav toggle (matches your HTML: .navbtn + .navlinks)
 (() => {

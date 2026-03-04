@@ -223,6 +223,11 @@ nav{
 .meta-row span{ color: var(--muted2); }
 .meta-row b{ color: rgba(255,255,255,0.92); font-weight: 600; }
 
+.hero-card img {
+  display: block;
+  margin: 16px auto 0;
+}
+
 /* Cards / grids */
 .grid{
   display:grid;
