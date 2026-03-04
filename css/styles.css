@@ -303,11 +303,9 @@ footer{
 }
 
 .navbtn .bar{
-  display:block;
   width: 20px;
   height: 2px;
   background: rgba(255,255,255,0.9);
-  margin: 4px 0;
   border-radius: 2px;
 }
 
