@@ -41,6 +41,7 @@ body:has(a.active[href="capstone.html"]) { --accent: var(--accentCapstone); }
 body:has(a.active[href="resume.html"]) { --accent: var(--accentResume); }
 background-attachment: fixed;
 position: relative;
+overflow-x: hidden;
 }
 
 body::after{
@@ -55,6 +56,12 @@ body::after{
     radial-gradient(800px 420px at 50% 90%, rgba(255,255,255,0.07), transparent 62%);
   filter: blur(14px);
   animation: auroraShift 12s ease-in-out infinite alternate;
+}
+
+body::after {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 @keyframes auroraShift{
@@ -546,3 +553,25 @@ footer{
 /* Minor layout helpers */
 .mini b { display: inline-block; margin-bottom: .2rem; }
 
+html, body { max-width: 100%; }
+* { max-width: 100%; }
+
+pre, code {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: pre-wrap;      /* wraps long lines */
+  word-break: break-word;     /* breaks long tokens */
+}
+.codeblock { max-width: 100%; }
+.codeblock code { white-space: pre-wrap; word-break: break-word; }
+
+/* Prevent overscroll glow/flash and weird scroll artifacts */
+html { background: var(--bg); }
+body { background-color: var(--bg); }
+
+.arch-wrap { max-width: 100%; overflow-x: hidden; }
+.arch-svg { max-width: 100%; height: auto; }
